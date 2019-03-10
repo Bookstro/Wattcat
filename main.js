@@ -16,7 +16,13 @@ let kitap_kapaklari = [
     "https://i.dr.com.tr/cache/600x600-0/originals/0000000064031-1.jpg",
     "https://i.dr.com.tr/cache/600x600-0/originals/0000000064552-1.jpg",
     "https://i.dr.com.tr/cache/600x600-0/originals/0000000561966-1.jpg",
-    "https://i.dr.com.tr/cache/600x600-0/originals/0000000153127-1.jpg"
+    "https://i.dr.com.tr/cache/600x600-0/originals/0000000153127-1.jpg",
+    "https://i.dr.com.tr/cache/600x600-0/originals/0000000662044-1.jpg",
+    "https://i.dr.com.tr/cache/600x600-0/originals/0000000723974-1.jpg",
+    "https://i.dr.com.tr/cache/600x600-0/originals/0001779245001-1.jpg",
+    "https://i.dr.com.tr/cache/600x600-0/originals/0000000390308-1.jpg",
+    "https://i.dr.com.tr/cache/600x600-0/originals/0001781926001-1.jpg",
+    "https://i.dr.com.tr/cache/600x600-0/originals/0001749972001-1.jpg"
 ];
 
 $(".kitap_kapak").each(function(){
@@ -43,5 +49,25 @@ $(".kitaplar .kitap img").each(function(){
     $(this).attr("src",kitap_kapaklari[Math.floor(Math.random()*kitap_kapaklari.length)]);
 })
 
+$(".ui_book_slider img").each(function(){
+    $(this).attr("src",kitap_kapaklari[Math.floor(Math.random()*kitap_kapaklari.length)]);
+})
+
+
+var slider = tns({
+    "container": ".ui_book_slider",
+    "items": 5,
+    "center": true,
+    "fixedWidth": 550,
+    "swipeAngle": false,
+    "mouseDrag": true,
+    "speed": 400
+  });
+
+document.querySelector(".tns-controls button:first-child").innerHTML = "<i class='material-icons'>navigate_before</i>";
+document.querySelector(".tns-controls button:last-child").innerHTML = "<i class='material-icons'>navigate_next</i>";
+
+$('.js-fillcolor').fillColor();
 
 });
+
