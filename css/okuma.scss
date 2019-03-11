@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height:100%;
+    transition:.3s;
+}
+
+.gece_modu {
+    background:#333;
+    color:#f9f9f9;
+}
+
+@mixin center {
+    position: absolute;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.cont {
+    height:calc(100% - 160px);
+    width:100%;
+    padding:5px 70px;
+    display:flex;
+    max-height:100%;
+    text-align:justify;
+    font-family: 'Laila', serif;
+    font-size:18px;
+    line-height: 32px;
+    
+    div {
+        flex:1;
+        overflow: hidden;
+    }
+
+    div:first-child {
+        padding:0 25px 0 0;
+    }
+    div:last-child {
+        padding:0 0 0 25px;
+    }
+
+    ::selection{
+        background: magenta;
+        color:#fff;
+    }
+
+}
+
+.nav,.bottom {
+    height:80px;
+    width:100%;
+    position: relative;
+}
+
+.nav {
+    
+    * {
+        user-select: none;
+    }
+    
+    .baslik {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        @include center;
+        color:lighten(#444, 20%);
+        font-size:14px;
+        line-height:80px;
+    }
+
+    .iconlar {
+        position: absolute;
+        left: 70px;
+        top:50%;
+        transform:translateY(-50%);
+        opacity:.5;
+
+        i {
+            margin:0 10px;
+            cursor: pointer;
+        }
+    }
+
+    .close {
+        position: absolute;
+        right: 70px;
+        top:50%;
+        transform:translateY(-50%);
+        background: darken(#f0f0f0,5%);
+        padding:8px;
+        border-radius: 50%;
+        cursor:pointer;
+        opacity:.7;
+        color:#000;
+    }
+}
+
+.bottom {
+
+    .ilerleme_yazi {
+        @include center;
+        color:lighten(#444, 20%);
+        font-size:14px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding:10px 0 0 0;
+    }
+    .ilerleme_cubuk {
+        height:5px;
+        border-radius: 5px;
+        background: #e0e0e0;
+        position: absolute;
+        left:70px;
+        right: 70px;
+        top:50px;
+        overflow: hidden;
+
+        .dolum {
+            position: absolute;
+            left: 0;
+            width: 22%;
+            height:100%;
+            background: hotpink;
+        }      
+    }
+}
+
+.basliklar_toggle {
+    color:lighten(#444, 60%) !important;
+}
