@@ -1,0 +1,187 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Quicksand,sans-serif;
+}
+
+.cont {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cont .left {
+  width: 40%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right bottom, from(#F01E4A), color-stop(#F64D7A), color-stop(#FB6A9B), to(#FC7CAD));
+  background: linear-gradient(to bottom right, #F01E4A, #F64D7A, #FB6A9B, #FC7CAD);
+  position: relative;
+}
+
+.cont .left .giris_yap {
+  font-weight: 700;
+  font-size: 48px;
+  margin-top: 150px;
+  color: #fff;
+  width: 100%;
+  padding: 0 50px;
+  text-align: center;
+}
+
+.cont .left .buton {
+  display: inline-block;
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  height: 60px;
+  line-height: 60px;
+  width: 250px;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #fff;
+  background: transparent;
+  border-radius: 30px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 420px;
+}
+
+.cont .left .buton:hover {
+  -webkit-transform: translateX(-50%) scale(1.1);
+          transform: translateX(-50%) scale(1.1);
+}
+
+.cont .right {
+  width: 60%;
+  height: 100%;
+  background: #f0f0f0;
+  position: relative;
+}
+
+.cont .right .hesap_olustur {
+  font-weight: 700;
+  color: #3AAF9F;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 90px;
+  font-size: 48px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#F01E4A), color-stop(#F64D7A), color-stop(#FB6A9B), to(#FC7CAD));
+  background: linear-gradient(to bottom right, #F01E4A, #F64D7A, #FB6A9B, #FC7CAD);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.cont .right label {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.cont .right label:nth-child(1) {
+  top: 250px;
+}
+
+.cont .right label:nth-child(2) {
+  top: 320px;
+}
+
+.cont .right label:nth-child(3) {
+  top: 390px;
+}
+
+.cont .right label i {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 10px;
+  opacity: .4;
+}
+
+.cont .right input {
+  width: 350px;
+  height: 50px;
+  background: #e0e0e0;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  padding: 0 0 0 50px;
+}
+
+.cont .right input::-webkit-input-placeholder {
+  font-size: 16px;
+  color: #444;
+  line-height: 50px;
+  font-weight: 300;
+}
+
+.cont .right input:-ms-input-placeholder {
+  font-size: 16px;
+  color: #444;
+  line-height: 50px;
+  font-weight: 300;
+}
+
+.cont .right input::-ms-input-placeholder {
+  font-size: 16px;
+  color: #444;
+  line-height: 50px;
+  font-weight: 300;
+}
+
+.cont .right input::placeholder {
+  font-size: 16px;
+  color: #444;
+  line-height: 50px;
+  font-weight: 300;
+}
+
+.cont .right .buton {
+  display: inline-block;
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 60px;
+  line-height: 60px;
+  width: 250px;
+  text-align: center;
+  text-decoration: none;
+  background: -webkit-gradient(linear, left top, right bottom, from(#F01E4A), color-stop(#F64D7A), color-stop(#FB6A9B), to(#FC7CAD));
+  background: linear-gradient(to bottom right, #F01E4A, #F64D7A, #FB6A9B, #FC7CAD);
+  top: 500px;
+  border-radius: 30px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.cont .right .buton:hover {
+  -webkit-transform: translateX(-50%) scale(1.1);
+          transform: translateX(-50%) scale(1.1);
+}
+/*# sourceMappingURL=signup.css.map */
