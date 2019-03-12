@@ -69,5 +69,15 @@ document.querySelector(".tns-controls button:last-child").innerHTML = "<i class=
 
 $('.js-fillcolor').fillColor();
 
+// modal başla
+$(".flex2 .kitaplar .kitap img").click(function(){
+    $(".modal, .arka_golge").fadeIn(300);
+    $(".modal .kapak").attr("src",$(this).attr("src"));
+})
+$(".modal .kapat").click(function(){
+    $(".arka_golge, .modal").fadeOut(300);
+})
+// modal bitiş
+
 });
 
