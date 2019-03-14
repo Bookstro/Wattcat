@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans%3A300,400,600,700">
+    <link rel="stylesheet" href="https://cdn.quilljs.com/1.0.0/quill.core.css">
+    <link rel="stylesheet" href="css/yazma.css">
+    <title>Yaz</title>
+</head>
+<body>
+<div class="nav">
+    <div class="nav_ic">
+        <div class="logo"></div>
+        <a href="#" class="buton">Yayımla</a>
+        <img src="https://picsum.photos/50" alt="">
+    </div>
+</div>
+    <div id="tooltip-controls">
+            <button id="bold-button"><i class="fa fa-bold"></i></button>
+            <button id="italic-button"><i class="fa fa-italic"></i></button>
+            <button id="link-button"><i class="fa fa-link"></i></button>
+            <button id="blockquote-button"><i class="fa fa-quote-right"></i></button>
+            <button id="header-1-button"><i class="fa fa-header"><sub>1</sub></i></button>
+            <button id="header-2-button"><i class="fa fa-header"><sub>2</sub></i></button>
+            </div>
+            <div id="sidebar-controls">
+            <span class="controls">
+                <button id="image-button"><i class="fa fa-camera"></i></button>
+                <button id="video-button"><i class="fa fa-play"></i></button>
+                <button id="tweet-button"><i class="fa fa-twitter"></i></button>
+                <button id="divider-button"><i class="fa fa-minus"></i></button>
+            </span>
+    </div>
+    <input type="text" placeholder="Başlık" id="baslik" maxlength="100" spellcheck="false">
+    <div id="editor-container" spellcheck="false">
+
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.quilljs.com/1.0.0/quill.core.js"></script>
+<script src="javascript/yazma.js"></script>
+</body>
+</html>

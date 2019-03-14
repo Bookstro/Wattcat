@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+
+* {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  #editor-container {
+    font-family: 'PT Serif', serif;
+    font-size: 22px;
+    color:#222;
+    height: 100%;
+    margin: 100px auto 0;
+    width: 60%;
+  }
+
+  input#baslik {
+    width: 60%;
+    outline:none;
+    border:none;
+    height:60px;
+    font-size:32px;
+    line-height: 31.24px;
+    position: absolute;
+    left:50%;
+    transform:translateX(-50%);
+    z-index: 3;
+    padding:0 0 0 16px;
+    top:80px;
+    font-family: 'PT Serif', serif;
+    color: #222;
+
+    &::placeholder {
+      padding:0 0 0 5px;
+      color: rgba(0,0,0,0.6);
+    }
+  }
+
+  #editor-container .ql-editor {
+    min-height: 100%;
+    height: inherit;
+    overflow-y: inherit;
+    padding-bottom: 75px;
+  }
+  #editor-container .ql-editor > * {
+    margin-top: 1.5em;
+  }
+  #editor-container .ql-editor > *:last-child {
+    margin-bottom: 50px;
+  }
+  #editor-container h1 + p,
+  #editor-container h2 + p {
+    margin-top: 0.5em; 
+  }
+  #editor-container blockquote {
+    border-left: 4px solid #111;
+    padding-left: 1em;
+  }
+  #editor-container hr {
+    border: none;
+    color: #111;
+    letter-spacing: 1em;
+    text-align: center;
+  }
+  #editor-container hr:before {
+    content: '...';
+  }
+  
+  #tooltip-controls {
+    background-color: #111;
+    border-radius: 4px;
+    display: none;
+    padding: 5px 10px;
+    position: absolute;
+  }
+  #tooltip-controls::before {
+    box-sizing: border-box;
+    border-bottom: 6px solid #111;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    content: ' ';
+    display: block;
+    height: 6px;
+    left: 50%;
+    position: absolute;
+    margin-left: -6px;
+    margin-top: -6px;
+    top: 0;
+    width: 6px;
+  }
+  #tooltip-controls button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+  }
+  #tooltip-controls button.active {
+    color: #21b384;
+  }
+  
+  #sidebar-controls {
+    display: none;
+    position: absolute;
+  }
+  #sidebar-controls button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  #sidebar-controls .controls {
+    display: none;
+    margin-left: 15px;
+  }
+  #sidebar-controls #show-controls i.fa::before {
+    content: "\f067";
+  }
+  #sidebar-controls.active .controls {
+    display: inline-block;
+  }
+  #sidebar-controls.active #show-controls i.fa::before {
+    content: "\f00d";
+  }
+  
+  button {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    padding: 0;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+  }
+  button:active, button:focus {
+    outline: none;
+  }
+  
+  .ql-editor.ql-blank::before {
+    color: rgba(0,0,0,0.6);
+    content: attr(data-placeholder);
+    font-style: italic;
+    pointer-events: none;
+    padding:33px 0 0 0;
+  }
+
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    border-bottom:1px solid #e0e0e0;
+
+    .nav_ic {
+      width:60%;
+      position: absolute;
+      top: 0;
+      left:50%;
+      transform:translateX(-50%);
+      height: 50px;
+      display:flex;
+      align-items: center;
+      justify-content:flex-end;
+
+      .logo {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        position: absolute;
+        top:50%;
+        transform:translateY(-50%);
+        left:0;
+        color:#fff;
+        background: #444;
+        font-size:24px;
+        text-align: center;
+
+        &::before {
+          content: 'W';
+        }
+      }
+
+      img {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+      }
+      a.buton {
+        text-decoration: none;
+        color:dodgerblue;
+        display:inline-block;
+        width: 120px;
+        height: 25px;
+        border:1px solid dodgerblue;
+        margin:0 30px;
+        border-radius: 3px;
+        font-size:14px;
+        font-family: 'Roboto',sans-serif;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        font-weight: 500;
+      }
+    }
+  }
+
+@media screen and (max-width:1072px){
+  #editor-container {
+    width: 80%;
+  }
+  input#baslik {
+    width: 80%;
+  }
+  .nav {
+
+    .nav_ic {
+      width:80%;
+    }
+  }
+}
+
+@media screen and (max-width:728px){
+  #editor-container {
+    width: 90%;
+  }
+  input#baslik {
+    width: 90%;
+  }
+  .nav {
+
+    .nav_ic {
+      width:90%;
+    }
+  }
+}
