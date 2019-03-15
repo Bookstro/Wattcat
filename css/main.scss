@@ -28,20 +28,69 @@ body {
         line-height: 50px;
     }
 
-    div:nth-child(2){
-        display: flex;
-        justify-content: flex-end;
+        label {
+            position: absolute;
+            top:0;
+            right: 70px;
+            z-index: 3;
+            top:50%;
+            transform:translateY(-50%);
+            display:none;
+            
+
+            input[type="text"]{
+                width: 400px;
+                height: 37px;
+                outline:none;
+                border:none;
+                font-size:16px;
+                line-height: 37px;
+                color:#444;
+                background: #F2F3F7;
+                border-radius: 10px;
+                padding:0 49px 0 40px;
+                font-family:Quicksand,sans-serif;
+                font-weight: 400;
+                z-index: 5;
+
+                &::placeholder {
+                    font-weight: 300;
+                }
+            }
+            .arama_icon {
+                position: absolute;
+                left: 5px;
+                top:50%;
+                transform:translateY(-50%);
+                color:rgba(0,0,0,.4);
+                width:30px;
+                height:37px;
+                display:flex;
+                align-items:center;
+                justify-content: center;
+                user-select: none;
+                cursor:default;
+            }
+            .kapat {
+                color:#444;
+                font-size:14px;
+                cursor: pointer;
+                font-family: Quicksand,sans-serif;
+            }
+        }
 
         i {
             line-height: 50px;
             font-size:22px;
             cursor: pointer;
-
-            &:nth-child(1){
-                margin:0 30px 0 0;
-            }
+            display:inline-block;
+            position: absolute;
+            right: 70px;
+            user-select: none;
         }
-    }
+        .search_icon{
+            right:110px;
+        }   
 }
 
 .icerik {
@@ -429,8 +478,7 @@ body {
             top:30px;
             left:30px;
             object-fit:cover;
-            box-shadow: 0 5px 10px rgba(0,0,0,.7);   
-            
+            box-shadow: 0 5px 10px rgba(0,0,0,.7);      
         }
 
         .sag {
@@ -440,6 +488,23 @@ body {
             position: absolute;
             right: 0;
             top: 0;
+            --bg-image:1;
+            overflow: hidden;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top:0;
+                left: 0;
+                background:var(--bg-image);
+                background-size:cover;
+                background-position: center top;
+                filter:blur(50px);
+                z-index: -1;
+                overflow: hidden;
+            }
 
             .baslik {
                 color:#fff;
@@ -728,3 +793,116 @@ body {
 }
 
 
+.side_menu {
+    position: fixed;
+    height:100vh;
+    width:300px;
+    left:0;
+    top:0;
+    background:hotpink;
+    z-index: 99;
+    box-shadow: -5px 0 120px 0 rgba(0,0,0,.4);
+    display:none;
+
+    .baslik {
+        color:#fff;
+        font-weight: 600;
+        font-size:40px;
+        position: absolute;
+        left:50px;
+        top:50px;
+        font-family: Quicksand,sans-serif;
+        font-weight: 500;
+    }
+
+    .linkler {
+        position: absolute;
+        top:50%;
+        transform:translateY(-50%);
+        left:0;
+        display:flex;
+        flex-direction: column;
+        width:100%;
+  
+        a {
+            display:inline-block;
+            padding:0 0 0px 40px;
+            color:#fff;
+            text-decoration: none;
+            line-height:50px;
+            height:50px;
+            font-family: Quicksand,sans-serif;
+            font-weight: 500;
+
+            &:nth-child(3), &:nth-child(6) {
+                padding:0 0 75px 40px;
+            }
+            &:last-child {
+                padding:0 0 0 40px;
+            }
+            
+            &:nth-child(1):hover ~ .cizgi {
+                top:0px !important;
+            }
+            &:nth-child(2):hover ~ .cizgi {
+                top:50px !important;
+            }
+            &:nth-child(3):hover ~ .cizgi {
+                top:100px !important;
+            }
+            &:nth-child(4):hover ~ .cizgi {
+                top:175px !important;
+            }
+            &:nth-child(5):hover ~ .cizgi {
+                top:225px !important;
+            }
+            &:nth-child(6):hover ~ .cizgi {
+                top:275px !important;
+            }
+            &:nth-child(7):hover ~ .cizgi {
+                top:350px !important;
+            }
+        }
+        
+        .cizgi {
+            width:5px;
+            height:50px;
+            background: #fff;
+            position: absolute;
+            top: 0;
+            left:0;
+            transition:.3s;
+        }
+    }
+    .profil {
+        position: absolute;
+        left: 30px;
+        bottom:30px;
+        color:#fff;
+        width:100%;
+        height:50px;
+        font-size: 14px;
+
+        img {
+            height:30px;
+            width:30px;
+            border-radius: 50%;
+            position: absolute;
+            left:0px;
+            top:50%;
+            transform:translateY(-50%);
+        }
+        span {
+            display:inline-block;
+            position: absolute;
+            left:50px;
+            top:0px;
+            line-height:50px;
+            height:50px;
+            user-select: none;
+            font-family: Roboto;
+            font-weight: 300;
+            letter-spacing: .7px;
+        }
+    }
+}

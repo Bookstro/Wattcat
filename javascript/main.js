@@ -77,7 +77,56 @@ $(".flex2 .kitaplar .kitap img").click(function(){
 $(".modal .kapat").click(function(){
     $(".arka_golge, .modal").fadeOut(300);
 })
+
+$(".ui_book_slider a.buton").click(function(){
+    $(".modal, .arka_golge").fadeIn(300);
+    $(".modal .kapak").attr("src",$(this).parent().prev().attr("src"));
+});
 // modal bitiş
+
+// arama kutusu açılması için başla
+$(".search_icon").click(function(){
+    $("#arama_label, .kapat, .buton").fadeIn(300);
+    $(".search_icon, .menu_icon").fadeOut(300);
+})
+$(".kapat").click(function(){
+    $("#arama_label, .kapat, .buton").fadeOut(300);
+    $(".search_icon, .menu_icon").fadeIn(300);
+})
+// arama kutusu açılması için bitiş
+
+const side_linkler = document.querySelectorAll(".side_menu .linkler a");
+const cizgi = document.querySelector(".cizgi");
+
+$(".linkler a").click(function(){
+    $(".linkler a").each(function(){
+        $(this).removeClass("active");
+    })
+    $(this).addClass("active");
+    
+    let a = 0;
+    side_linkler.forEach(function(p){
+        a++;
+        if(p.classList.contains("active") && a == 1)
+            cizgi.style.top = "0px";
+        else if(p.classList.contains("active") && a == 2)
+            cizgi.style.top = "50px";
+        else if (p.classList.contains("active") && a == 3)
+            cizgi.style.top = "100px";
+        else if (p.classList.contains("active") && a == 4)
+            cizgi.style.top = "175px";
+        else if (p.classList.contains("active") && a == 5)
+            cizgi.style.top = "225px";
+        else if (p.classList.contains("active") && a == 6)
+            cizgi.style.top = "275px";
+        else if (p.classList.contains("active") && a == 7)
+            cizgi.style.top = "350px";
+    });
+})
+
+$(".menu_icon").click(function(){
+    $(".side_menu").animate({width:'toggle'},300);
+})
 
 });
 
