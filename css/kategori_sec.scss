@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Bitter|Mate');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+* {
+    box-sizing: border-box;
+    font-family:Roboto,sans-serif;
+}
+
+body {
+    padding: 0;
+    margin:0;
+}
+
+.container {
+    display:grid;
+    grid-template-columns: repeat(3,350px);
+    grid-auto-flow:row;
+    grid-auto-rows:100px;
+    justify-content: space-between;
+    grid-row-gap: 30px; 
+    padding:30px 70px 100px 70px;
+
+    .kategori {
+        width:350px;
+        height:100px;
+        box-shadow:0 0 10px 0 rgba(0,0,0,.1);
+        border-radius: 10px;
+        display: flex;
+        letter-spacing: .3px;
+        color:#444;
+        font-size:15px;
+        overflow: hidden;
+        position: relative;
+        cursor:pointer;
+
+        .resim {
+            display:block;
+            width:100px;
+            height:100px;
+            object-fit: cover;
+            user-select: none;
+        }
+        .yazi {
+            width: 250px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size:18px;
+            user-select: none;
+        }
+    }
+    .secildi {
+          
+        &::before {
+            content: '\2714';
+            background-color: rgba(252, 185, 65, .7);
+            color:yellowgreen;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size:52px;
+            z-index: 3;
+        }
+    }
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background: orangered;
+    bottom:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    font-family: 'Quicksand', sans-serif;
+    font-size:18px;
+    letter-spacing: .4px;
+
+    .secilmemisse {
+        position: absolute;
+        background: orangered;
+        z-index: 2;
+        left: 0;
+        top:0;
+        width: 100%;
+        height: 100%;
+        color:#fff;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    .tane {
+        padding:0 5px 0 0;
+    }
+}
