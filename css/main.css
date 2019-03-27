@@ -940,8 +940,8 @@ body {
   top: 0;
   background: hotpink;
   z-index: 99;
-  -webkit-box-shadow: -5px 0 120px 0 rgba(0, 0, 0, 0.4);
-          box-shadow: -5px 0 120px 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 5px 0 120px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 5px 0 120px 0 rgba(0, 0, 0, 0.4);
   display: none;
 }
 
