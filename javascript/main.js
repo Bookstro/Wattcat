@@ -86,11 +86,11 @@ $(".ui_book_slider a.buton").click(function(){
 
 // arama kutusu açılması için başla
 $(".search_icon").click(function(){
-    $("#arama_label, .kapat, .buton").fadeIn(300);
+    $("#arama_label, #arama_label .kapat").fadeIn(300);
     $(".search_icon, .menu_icon").fadeOut(300);
 })
 $(".kapat").click(function(){
-    $("#arama_label, .kapat, .buton").fadeOut(300);
+    $("#arama_label, #arama_label .kapat").fadeOut(300);
     $(".search_icon, .menu_icon").fadeIn(300);
 })
 // arama kutusu açılması için bitiş
