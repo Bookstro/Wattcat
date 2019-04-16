@@ -20,3 +20,5 @@ Wattcat, kitap okuma ve yazma platformudur.
 
 7. [Kategori Seçme Sayfası](https://salimcansatici.github.io/Wattcat/kategori_sec.html)
 
+8. [Özel Kategori Sayfası](https://salimcansatici.github.io/Wattcat/kategori.html)
+
