@@ -12,13 +12,15 @@ Wattcat, kitap okuma ve yazma platformudur.
 
 3. [Giriş Yap](https://salimcansatici.github.io/Wattcat/login.html)
 
-4. [Kitap Görüntüleme Sayfası](https://salimcansatici.github.io/Wattcat/kitap_sayfasi.html)
+4. [Profil](https://salimcansatici.github.io/Wattcat/profil.html)
 
-5. [Kitap Okuma Sayfası](https://salimcansatici.github.io/Wattcat/okuma_sayfasi.html)
+5. [Kitap Görüntüleme Sayfası](https://salimcansatici.github.io/Wattcat/kitap_sayfasi.html)
 
-6. [Kitap Yazma Sayfası](https://salimcansatici.github.io/Wattcat/yazma.html)
+6. [Kitap Okuma Sayfası](https://salimcansatici.github.io/Wattcat/okuma_sayfasi.html)
 
-7. [Kategori Seçme Sayfası](https://salimcansatici.github.io/Wattcat/kategori_sec.html)
+7. [Kitap Yazma Sayfası](https://salimcansatici.github.io/Wattcat/yazma.html)
 
-8. [Özel Kategori Sayfası](https://salimcansatici.github.io/Wattcat/kategori.html)
+8. [Kategori Seçme Sayfası](https://salimcansatici.github.io/Wattcat/kategori_sec.html)
+
+9. [Özel Kategori Sayfası](https://salimcansatici.github.io/Wattcat/kategori.html)
 
